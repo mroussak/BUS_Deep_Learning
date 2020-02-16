@@ -80,7 +80,7 @@ u-net + batch norm            |  res-unet + batch norm
 
 ![validation_set_results_w_normals.png](static/validation_set_results_w_normals.png)
 
-Considerable imporovement were obtained over the standard u-net architecture
+Considerable imporovement was obtained over the standard u-net architecture
 
 IOU 6.8% improvement from u-net with no augmentation and no batch normalization to res-unet with no augmentation and no batch normalization
 
