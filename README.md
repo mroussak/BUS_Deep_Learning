@@ -51,22 +51,30 @@ Comparison between standard u-net (left) and u-net with batch normalization (rig
 
 --> Down Block
 
-![unet_bus_base_db.png](static/unet_bus_base_db.png) ![unet_bus_base+batchnorm_db.jpg](unet_bus_base+batchnorm_db.png)
+u-net            |  u-net + batch norm
+:-------------------------:|:-------------------------:
+![unet_bus_base_db.png](static/unet_bus_base_db.png)  |  ![unet_bus_base+batchnorm_db.jpg](static/unet_bus_base+batchnorm_db.png)
 
 --> UpBlock
 
-![unet_bus_base_ub.png](static/unet_bus_base_ub.png) ![unet_bus_base+batchnorm_ub.jpg](unet_bus_base+batchnorm_ub.png)
+u-net            |  u-net + batch norm
+:-------------------------:|:-------------------------:
+![unet_bus_base_ub.png](static/unet_bus_base_ub.png)  |  ![unet_bus_base+batchnorm_ub.jpg](static/unet_bus_base+batchnorm_ub.png)
 
 
 Comparison between u-net with batch normalization (left) and res-unet with batch normalization (right)
 
 --> Down Block
 
-![unet_bus_base+batchnorm_db.png](static/unet_bus_base+batchnorm_db.png) ![res_unet_bus_base+batchnorm_db.png](static/res_unet_bus_base+batchnorm_db.png)
+u-net + batch norm            |  res-unet + batch norm
+:-------------------------:|:-------------------------:
+![unet_bus_base+batchnorm_db.png](static/unet_bus_base+batchnorm_db.png) |  ![res_unet_bus_base+batchnorm_db.png](static/res_unet_bus_base+batchnorm_db.png)
 
 --> UpBlock
 
-![unet_bus_base+batchnorm_ub.png](static/unet_bus_base+batchnorm_ub.png) ![unet_bus_base+batchnorm_ub.jpg](unet_bus_base+batchnorm_ub.png)
+u-net + batch norm            |  res-unet + batch norm
+:-------------------------:|:-------------------------:
+![unet_bus_base+batchnorm_ub.png](static/unet_bus_base+batchnorm_ub.png) |  ![unet_bus_base+batchnorm_ub.jpg](unet_bus_base+batchnorm_ub.png)
 
 **RESULTS**
 
