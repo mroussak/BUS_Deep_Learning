@@ -74,7 +74,7 @@ u-net + batch norm            |  res-unet + batch norm
 
 u-net + batch norm            |  res-unet + batch norm
 :-------------------------:|:-------------------------:
-![unet_bus_base+batchnorm_ub.png](static/unet_bus_base+batchnorm_ub.png) |  ![unet_bus_base+batchnorm_ub.png](static/unet_bus_base+batchnorm_ub.png)
+![unet_bus_base+batchnorm_ub.png](static/unet_bus_base+batchnorm_ub.png) |  ![res_unet_bus_base+batchnorm_ub.png](static/unet_bus_base+batchnorm_ub.png)
 
 **RESULTS**
 
