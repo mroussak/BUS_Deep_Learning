@@ -3,8 +3,8 @@ import numpy as np
 from mrcnn.config import Config
 from pathlib import Path
 
-len_training_set = len(os.listdir(Path('data/seg_dir/train_images').absolute()))
-len_val_set = len(os.listdir(Path('data/seg_dir/val_images').absolute()))
+len_training_set = len(os.listdir(Path('data/seg_dir_instance_seg/train_images').absolute()))
+len_val_set = len(os.listdir(Path('data/seg_dir_instance_seg/val_images').absolute()))
 
 class BUS_DS_Config(Config):
     """Configuration for training on the instance-segmentation dataset.
@@ -12,7 +12,7 @@ class BUS_DS_Config(Config):
     to the instance-segmentation dataset.
     """
     # Give the configuration a recognizable name
-    NAME = 'instance-seg-compact'
+    NAME = 'instance-seg-lesion-bce_loss-with-normals-class_bm-cocotl'
     
     BACKBONE = "resnet101"
     
@@ -23,10 +23,10 @@ class BUS_DS_Config(Config):
     # Train on 1 GPU and 8 images per GPU. We can put multiple images on each
     # GPU because the images are small. Batch size is 8 (GPUs * images/GPU).
     GPU_COUNT = 1
-    IMAGES_PER_GPU = 32
+    IMAGES_PER_GPU = 16
 
     # Number of classes (including background)
-    NUM_CLASSES = 2  # background + 1 shapes
+    NUM_CLASSES = 3  # background + 1 shapes
 
     # Use small images for faster training. Set the limits of the small side
     # the large side, and that determines the image shape.
@@ -50,10 +50,10 @@ class BUS_DS_Config(Config):
     TRAIN_ROIS_PER_IMAGE = 32
 
     # Use a small epoch since the data is simple
-    STEPS_PER_EPOCH = len_training_set/16
+    STEPS_PER_EPOCH = int(len_training_set/IMAGES_PER_GPU)
 
     # use small validation steps since the epoch is small
-    VALIDATION_STEPS = len_val_set/16
+    VALIDATION_STEPS = int(len_val_set/IMAGES_PER_GPU)
     
     DETECTION_MAX_INSTANCES = 1
     
@@ -65,3 +65,13 @@ class BUS_DS_Config(Config):
     # memory load. Recommended when using high-resolution images.
     USE_MINI_MASK = True
     MINI_MASK_SHAPE = (56, 56)  # (height, width) of the mini-mask
+    
+    # Loss weights for more precise optimization.
+    # Can be used for R-CNN training setup.
+    LOSS_WEIGHTS = {
+        "rpn_class_loss": 1.,
+        "rpn_bbox_loss": 1.,
+        "mrcnn_class_loss": 1.,
+        "mrcnn_bbox_loss": 1.,
+        "mrcnn_mask_loss": 1.
+    }

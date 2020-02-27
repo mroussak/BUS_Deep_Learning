@@ -35,7 +35,12 @@ class BUS_Dataset(utils.Dataset):
 #             print(mask_path)
             mask = cv2.imread(mask_path,cv2.IMREAD_GRAYSCALE)  
             masks.append(mask)
-            class_ids.append(1)
+            if 'normal' in mask_path:
+                class_ids.append(0)
+            if 'benign' in mask_path:
+                class_ids.append(1)
+            if 'malignant' in mask_path:
+                class_ids.append(2)
         masks = np.moveaxis(masks,0,-1)
         class_ids = np.array(class_ids)
         return masks, class_ids
