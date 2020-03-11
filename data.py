@@ -17,6 +17,7 @@ def train_generator_npy(input_shape,image_path,mask_path,image_prefix,mask_prefi
         img = cv2.imread(item, cv2.IMREAD_GRAYSCALE)
         img = cv2.resize(img, input_shape)
 #         img_input = (img-np.mean(img))/np.std(img)
+#         img = cv2.equalizeHist(img)
         img_input = img/255.0
         img_input = np.reshape(img_input,img_input.shape + (1,))
         print('img shape :', img_input.shape)
