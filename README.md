@@ -23,9 +23,9 @@ Train
 **624 images in total**
 
 Validation
-*87 images with benign tumours
-*42 images with malignant tumours
-*27 images with no tumours
+* 87 images with benign tumours
+* 42 images with malignant tumours
+* 27 images with no tumours
 
 **156 images in total**
 
@@ -100,7 +100,7 @@ A classification model that predicted whether a tumour was malignant or benign w
 
 **Segmentation**
 
-![validation_set_results_w_normals.png](static/validation_set_results_w_normals.png)
+![validation_set_results_classification.png](static/validation_set_results_classification.png)
 
 Considerable imporovement was obtained over the standard u-net architecture
 
