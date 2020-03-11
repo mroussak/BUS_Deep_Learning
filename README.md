@@ -100,7 +100,7 @@ A classification model that predicted whether a tumour was malignant or benign w
 
 **Segmentation**
 
-![validation_set_results_classification.png](static/validation_set_results_classification.png)
+![validation_set_results_w_normals.png](static/validation_set_results_w_normals.png)
 
 Considerable imporovement was obtained over the standard u-net architecture
 
