@@ -110,7 +110,7 @@ Dice Loss 6.1% improvement from u-net with no augmentation and no batch normaliz
 
 **Classification**
 
-![validation_set_results_classification.png](static/validation_set_results_classification.png =25x5)
+![validation_set_results_classification.png](static/validation_set_results_classification.png){:height="36px" width="12px"}.
 
 **REFERENCES**
 
